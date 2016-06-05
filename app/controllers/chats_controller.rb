@@ -12,9 +12,10 @@ class ChatsController < ApplicationController
   end
 
   def create
-    @chat = Chat.new(chat_params)
+    @room = Room.find(params[:room_id])
+    @chat = @room.chats.create(params[:chat].permit(:comment))
     if @chat.save
-      redirect_to root_path
+      redirect_to room_path(@room)
     else
       render "new"
     end
