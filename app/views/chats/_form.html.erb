@@ -1,0 +1,4 @@
+<%= simple_form_for [@room, @room.chats.build] do |f| %>
+  <%= f.input :comment, class: "form-control" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
