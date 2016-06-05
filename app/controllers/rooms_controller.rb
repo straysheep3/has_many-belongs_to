@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   end
 
   def show
-    # @chat = Chat.find(params[:room_id])
+    
   end
 
   def new

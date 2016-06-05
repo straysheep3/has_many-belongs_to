@@ -2,6 +2,9 @@
 
 <p><%= @room.title %></p>
 <p><%= @room.description %></p>
+<p>
+  <%= @room.user.email %>
+</p>
 
 <%= render @room.chats %>
 
